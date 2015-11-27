@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PermissionsAPI23</string>
+    <string name="permission_granted">Permission acceptée</string>
+    <string name="permission_denied">Permission refusée</string>
+    <string name="permission_state_unknown">Première fois OU refusé complètement ?</string>
+    <string name="permission_show_rationale">Show popup d\'explication</string>
+    <string name="permission_explication">Si vous empêchez l\'application d\'effectuer des appels téléphoniques, il faudra quitter l\'application et appeler manuellement.</string>
+
+
+</resources>
