@@ -56,12 +56,14 @@ public class MainActivity extends AppCompatActivity {
                 if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
                     Toast.makeText(this, R.string.permission_granted, Toast.LENGTH_LONG).show();
                 } else {
-                    showMessageOKCancel(new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            checkPermission();
-                        }
-                    });
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_PHONE_STATE)) {
+                        showMessageOKCancel(new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                checkPermission();
+                            }
+                        });
+                    }
                 }
                 break;
         }
